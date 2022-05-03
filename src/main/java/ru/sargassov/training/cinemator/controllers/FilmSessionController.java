@@ -1,7 +1,6 @@
 package ru.sargassov.training.cinemator.controllers;
 
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -58,8 +57,7 @@ public class FilmSessionController {
 //    среднего числа зрителей за сеанс и общей суммы сборов по каждому фильму
 //    (отсортировать по убыванию прибыли).
 
-    @GetMapping("/allfilms") //необходимо писать сначала день, потом час с которого считается, потом до которого
-    //например чтобы посмотреть в воскресенье с 9 до 12 нужно написать http://localhost:7777/cinema/allfor?day=7&start=9&finish=12
+    @GetMapping("/allfilms") //выводит на экран запрос в виде JSON внизу добавляет строку итого
     public List<FilmVisitorForAllTime> findFilmVisitorForAllTime() {
         return filmSessionService.findFilmVisitorForAllTime();
     }
