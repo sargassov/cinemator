@@ -1,0 +1,9 @@
+server:
+  port: 7777
+  servlet:
+    context-path: /cinema
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cinema
+    username: postgres
+    password: 1111
